@@ -31,5 +31,5 @@ Ribbot::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = false
   
-  config.action_mailer.default_url_options = { :host => "ribbot.local:3000" }
+  config.action_mailer.default_url_options = { :host => "deroptyja.psi:3000" }
 end
