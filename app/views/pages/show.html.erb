@@ -1,5 +1,8 @@
+<% if !signed_in? && page.exclusive -%>
 <%= @page.text.html_safe %>
 
 <% content_for :javascript_footer do %>
   $('.header_page_<%= @page.id %>').addClass('active');
 <% end %>
+<% end -%>
+

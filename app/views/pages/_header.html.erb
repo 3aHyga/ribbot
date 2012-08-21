@@ -1,5 +1,6 @@
 <% cache ['header v1', current_forum] do %>
   <% current_forum.pages.asc(:position).each do |page| %>
+    <% next if !signed_in? && page.exclusive -%>
     <li class="header_page_<%= page.id %>">
       <% if page.url? %>
         <%= link_to page.name, page.url, :rel => 'nofollow' %>
@@ -9,3 +10,4 @@
     </li>
   <% end %>
 <% end %>
+

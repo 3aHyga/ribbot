@@ -6,6 +6,7 @@ class Page
   field :name, type: String
   field :text, type: String
   field :url, type: String
+  field :exclusive, type: Boolean, default: false
   
   belongs_to :forum, index: true
   
@@ -46,3 +47,4 @@ class Page
     forum.update_attribute :updated_at, Time.now
   end
 end
+

@@ -24,7 +24,7 @@ jQuery ->
     tr.find('.edit').hide()
     tr.find('.show').fadeIn('fast')
     
-  $('.post-form .tag-link, .comment-form .tag-link').click (e) ->
+  $('.tag-link').click (e) ->
     $(this).toggleClass('active')
     checkbox = $(this).siblings('.tag-checkbox')
     checkbox.attr('checked', !checkbox.attr('checked'))

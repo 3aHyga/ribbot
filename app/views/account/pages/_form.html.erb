@@ -20,6 +20,10 @@
     <div id="text_container">
       <%= f.text_area :text, :class => "span8" %>
     </div>
+    <p>
+      <%= f.check_box :exclusive, { :class => 'tag-checkbox' }, true, nil %>
+      <%= link_to 'Exclusive page', '#', :class => 'tag tag-link' %>
+    </p>
   </p>
   
   <div class="form-actions">
