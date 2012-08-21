@@ -6,6 +6,9 @@ class PagesController < ApplicationController
     if @page.nil?
       redirect_to root_path(:subdomain => current_forum.subdomain), :notice => "That page is no longer available."
       return
+    elsif @page.exclusive && !signed_in?
+      redirect_to signin_path(:subdomain => current_forum.subdomain), :notice => "The page require logged-in user to see it."
+      return
     end
   end  
 end

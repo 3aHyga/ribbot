@@ -11,13 +11,14 @@ this task individually because it is not high-priority)
 It should just be a button beside the 'submit' button. Instead of publishing the post, it would just save it in the database to be published later (and not be publicly viewable until then).
 1.3 option to set the post as 'exclusive' or 'public'. If
 'exclusive', users must be logged into the site in order to see it
+1h
 1.4 if the new page is set to 'exclusive' and user is NOT logged
 in, show the registration form on that page instead of the page
 content
 1.5 if the new page is set to 'exclusive' and user is logged in,
 show a little yellow tab in the header (eg. http://grab.by/f8ac)
 1.4, 1.5: It is on the same page as the save button, 'submit' button, and the HTML text box - the page where the superuser is supposed to enter the new page content. Just a radio button to either select 'exclusive' or 'public'.
-
+1h
 
 3. On each post page, if no description is already entered and the
 share is a link, automatically pull the description text from the page (maximum number of words limit).
