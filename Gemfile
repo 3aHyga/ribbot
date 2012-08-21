@@ -29,6 +29,7 @@ gem 'omniauth-github',               '1.0.1'
 gem 'omniauth-facebook',             '1.4.0'
 gem 'omniauth-twitter',              '0.0.9'
 gem 'to_xls',                        '~> 1.0.0'
+gem 'bootstrap-wysihtml5-rails',     '~> 0.3.0'
 
 group :assets do
   gem 'sass-rails', "  ~> 3.1.4"

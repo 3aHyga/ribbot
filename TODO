@@ -5,6 +5,7 @@ embed video code (youtube, vimeo). If it's easier, just change this to
 an HTML editor instead of a WYSIWYG editor, so I can copy/paste HTML
 code into the box.
 use HTML please
+added to WYSIWYG5 new version allowing HTML code edit (2h)
 1.2 save post option to save it to publish later (please quote
 this task individually because it is not high-priority)
 It should just be a button beside the 'submit' button. Instead of publishing the post, it would just save it in the database to be published later (and not be publicly viewable until then).

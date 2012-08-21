@@ -34,6 +34,47 @@
 
 <% content_for :javascript_footer do %>
   $('#page_text').wysihtml5({
-    autoLink:       false
+    autoLink: false,
+    "html": true,
+    parserRules: {
+      tags: {
+	"b":  {},
+	"i":  {},
+	"br": {},
+	"ol": {},
+	"ul": {},
+	"li": {},
+	"h1": {},
+	"h2": {},
+	"blockquote": {},
+	"u": 1,
+	"img": {
+	  "check_attributes": {
+	    "width": "numbers",
+	    "alt": "alt",
+	    "src": "url",
+	    "height": "numbers"
+	  }
+	},
+	"a":  {
+	  set_attributes: {
+	    target: "_blank",
+	    rel:    "nofollow"
+	  },
+	  check_attributes: {
+	    href:   "url" // important to avoid XSS
+	  }
+	},
+	"iframe": {
+	  "check_attributes": {
+	    "width": "numbers",
+	    "frameborder": "numbers",
+	    "src": "url",
+	    "height": "numbers"
+	  }
+	}
+      }
+    }
   });
 <% end %>
+
