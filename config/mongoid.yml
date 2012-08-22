@@ -7,4 +7,6 @@ test:
   database: ribbot_test
 
 production:
-  uri: <%= ENV['MONGOLAB_URI'] %>
+  host: localhost
+  database: ribbot_development
+

@@ -42,6 +42,10 @@ group :test, :development do
   gem "rspec-rails"
 end
 
+group :production do
+  gem "unicorn"
+end
+
 group :test do
   gem "capybara",        '1.1.1'
   gem "guard-rspec",     '0.5.0'

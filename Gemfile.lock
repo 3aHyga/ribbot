@@ -274,6 +274,10 @@ GEM
     uglifier (1.1.0)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
+    unicorn (4.3.1)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
     url2png (0.0.6)
     voteable_mongo (0.9.3)
     xml-simple (1.1.1)
@@ -326,5 +330,6 @@ DEPENDENCIES
   to_xls (~> 1.0.0)
   twitter-bootstrap-rails (= 2.0.4)
   uglifier (>= 1.0.3)
+  unicorn
   url2png (= 0.0.6)
   voteable_mongo (= 0.9.3)

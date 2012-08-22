@@ -41,10 +41,10 @@ class Mailer < ActionMailer::Base
   def customize forum
     if forum.nil?
       @host = Ribbot::Application.config.action_mailer.default_url_options[:host]
-      @from = "Impact.org <service@deroptyja.psi>"
+      @from = "Impact.org <service@impact.org>"
     else
       @host = forum.hostname
-      @from = "#{forum.name} <service@deroptyja.psi>"
+      @from = "#{forum.name} <service@impact.org>"
     end
   end
 
