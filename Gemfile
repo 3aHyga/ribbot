@@ -45,6 +45,7 @@ end
 group :production do
   gem "unicorn"
   gem "kgio"
+  gem 'raindrops'
 end
 
 group :test do
