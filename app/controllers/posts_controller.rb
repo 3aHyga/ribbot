@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
   before_filter :require_current_forum!
   before_filter :authenticate_user!, :except => [:show, :index]
+
+  include PostsHelper
   
   def new
     @post = Post.new
@@ -10,6 +12,8 @@ class PostsController < ApplicationController
     @post = current_forum.posts.new(params[:post])
     @post.user = current_user
     @post.forum = current_forum
+    logger.debug "#{@post.url.inspect} -- #{@post.text.inspect}"
+    @post.text = parse_text_from_url(@post.url) if @post.url && @post.text.blank?
     if @post.save
       current_user.vote(@post, :up)
       @post.update_ranking
