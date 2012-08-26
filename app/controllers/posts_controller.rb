@@ -84,9 +84,9 @@ class PostsController < ApplicationController
 
     if params[:redirect_action].blank?
       if response
-	redirect_to @post, :notice => "Story tweeted!"
+	redirect_to @post, :notice => "This story has been tweeted"
       else
-	redirect_to root_path, :notice => "Story hasn't twitted!"
+	redirect_to root_path, :notice => "This story hasn't been tweeted"
       end
     end
   end
